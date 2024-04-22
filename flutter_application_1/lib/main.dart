@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,9 +93,55 @@ class ScreenMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Image.asset('assets/images/logo.png',width: 150,height: 150,),
-      Divider()
-    ],);
+    return Center(
+      child: Container(
+        padding: EdgeInsets.all(10),
+        margin: EdgeInsets.all(10),
+        
+        child: Column(children: [
+      
+      
+          Row(children: [
+      
+      
+            Column(
+              
+              children: [
+                Row(children: [Image.asset('assets/images/user.png',width: 50,height: 50,),
+                Divider(thickness: 3,)
+                ],)
+                
+              
+               
+              
+              ],),
+      
+              
+       Column(children: [
+        
+              Text('Foydalanuvchi:'),
+              Divider(),
+              Text('Karta raqami:')
+               
+              
+              ],),
+      
+        
+          
+          ]
+          ),
+        
+        
+        
+        
+          Divider(),
+        
+        ],),
+      
+      
+      
+      
+      ),
+    );
   }
 }
